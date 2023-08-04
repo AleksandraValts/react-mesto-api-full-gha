@@ -1,0 +1,36 @@
+.profile__image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: 40px;
+    background-position: center;
+    position: relative;
+}
+  
+@media screen and (max-width: 700px) {
+    .profile__image {
+        max-width: 120px;
+        margin-top: 42px;
+    }
+}
+
+/*.profile__image::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    background-image: url(../../../images/Vector.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    transition: opacity 0.2s linear;
+    opacity: 0;
+    content: '';
+}
+  
+.profile__image:hover::before {
+    cursor: pointer;
+    opacity: 0.8;
+} */

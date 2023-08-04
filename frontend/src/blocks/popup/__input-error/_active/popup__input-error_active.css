@@ -1,0 +1,18 @@
+.popup__input-error_active {
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    max-width: 358px;
+    padding-left: 36px;
+    margin-top: 5px;
+    display: inline-block;
+    height: 36px;
+    visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__input-error_active {
+        max-width: 238px;
+        padding-left: 22px;
+    }
+}

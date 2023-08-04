@@ -1,0 +1,10 @@
+.popup__span {
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 358px;
+    padding-left: 36px;
+    margin-top: 5px;
+    display: inline-block;
+    height: 33px;
+    visibility: hidden;
+}

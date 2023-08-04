@@ -1,0 +1,31 @@
+.popup__container_login {
+    width: 430px;
+    min-height: 330px;
+  }
+  
+  .popup__login-img {
+    max-width: 120px;
+    width: 100%;
+    min-height: 120px;
+    margin: 60px auto auto auto;
+  }
+  
+  .popup__login-img_type_ok {
+    background-image: url(../../../images/icon-ok.png);
+  }
+  
+  .popup__login-img_type_not-ok {
+    background-image: url(../../../images/icon-not-ok.png);
+  }
+  
+  .popup__title-login {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+    max-width: 358px;
+    margin: 32px auto 60px auto;
+  }
+
