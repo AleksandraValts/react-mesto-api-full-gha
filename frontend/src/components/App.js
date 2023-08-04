@@ -139,7 +139,7 @@ function App() {
    return apiAuth
       .register(email, password)
       .then((res) => {
-        if (res._id) {
+        if (res) {
           setInfoTTSuccess(true);
           navigate('/sign-in');
         }
