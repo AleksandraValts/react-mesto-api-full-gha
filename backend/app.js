@@ -2,8 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const cors = require('cors');
 const { errors } = require('celebrate');
+const cors = require('cors');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const auth = require('./middlewares/auth');
 const { createUser, login } = require('./controllers/users');
 const { validationCreateUser, validationLogin } = require('./middlewares/validate');
@@ -19,16 +20,18 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.post('/signin', validationLogin, login);
-app.post('/signup', validationCreateUser, createUser);
-app.use(auth);
-app.use('/users', usersRouter);
-app.use('/cards', cardsRouter);
+app.use(requestLogger);
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
+app.post('/signin', validationLogin, login);
+app.post('/signup', validationCreateUser, createUser);
+app.use(auth);
+app.use(errorLogger);
+app.use('/users', usersRouter);
+app.use('/cards', cardsRouter);
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
