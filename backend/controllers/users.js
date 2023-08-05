@@ -63,7 +63,7 @@ module.exports.changeUserInfo = (req, res, next) => {
   User.findByIdAndUpdate(userId, { name, about }, { new: true, runValidators: true })
     .then((user) => {
       if (user) return res.send(user);
-      throw new NotFound('Пользователь не найден');
+      throw new NotFound('Пользователь не найдн');
     })
     .catch((err) => {
       if (err.name === 'ValidationError' || err.name === 'CastError') {
