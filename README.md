@@ -11,6 +11,6 @@
 
 IP-адрес x.x.x.x
 
-Frontend https://...
+Frontend http://localhost:4000
 
-Backend https://...
+Backend http://localhost:3000
