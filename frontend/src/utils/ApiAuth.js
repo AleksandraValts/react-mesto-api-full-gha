@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:4000';
+export const BASE_URL = 'http://api.valts.mesto.nomoreparties.co';
 
 const checkRes = (res) => {
   if (res.ok) {
