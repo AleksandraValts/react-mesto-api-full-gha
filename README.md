@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.69.92
+IP 158.160.69.92
 
 Frontend http://valts.mesto.nomoreparties.co
 
