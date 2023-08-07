@@ -43,3 +43,4 @@ export const checkToken = (token) => {
   })
   .then(checkRes)
 }
+

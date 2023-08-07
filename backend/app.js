@@ -31,13 +31,13 @@ app.get('/crash-test', () => {
 app.post('/signin', validationLogin, login);
 app.post('/signup', validationCreateUser, createUser);
 app.use(auth);
-app.use(errorLogger);
 app.use('/users', usersRouter);
 app.use('/cards', cardsRouter);
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 app.use((req, res, next) => next(new NotFound('Страницы не существует')));
+app.use(errorLogger);
 app.use(errors());
 app.use(error);
 
