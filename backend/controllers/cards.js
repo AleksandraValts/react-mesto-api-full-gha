@@ -31,12 +31,11 @@ module.exports.deleteCard = (req, res, next) => {
   const { cardId } = req.params;
   const { userId } = req.user;
   return Card.findById(cardId)
-    .populate(['owner', 'likes'])
     .then((card) => {
       if (!card) {
         throw new NotFound('Карточка не найдена');
       }
-      if (card.owner.valueOf() === userId) {
+      if (card.owner.valueOf() !== userId) {
         throw new Forbidden('Нет прав доступа');
       }
       return Card.findByIdAndDelete(cardId);
