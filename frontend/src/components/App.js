@@ -133,7 +133,8 @@ function App() {
 
   React.useEffect(() => {
     handleTokenCheck();
-  }, [navigate])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   function handleRegisterNewUser({email, password}) {
    return apiAuth
