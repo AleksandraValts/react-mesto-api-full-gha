@@ -2,7 +2,7 @@
 
 # Dependency directory
 node_modules
-
+**/node_modules
 # dependencies
 /node_modules
 /.pnp
