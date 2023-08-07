@@ -36,8 +36,7 @@ module.exports.deleteCard = (req, res, next) => {
       if (!card) {
         throw new NotFound('Карточка не найдена');
       }
-      const { owner: cardOwnerId } = card;
-      if (cardOwnerId.valueOf() === userId) {
+      if (card.owner.valueOf() === userId) {
         throw new Forbidden('Нет прав доступа');
       }
       return Card.findByIdAndDelete(cardId);

@@ -13,7 +13,7 @@ const Unauthorized = require('../errors/Unauthorized (401)');
 
 module.exports.getUser = (req, res, next) => {
   User.find({})
-    .then((users) => res.send({ users }))
+    .then((users) => res.send(users))
     .catch(next);
 };
 
