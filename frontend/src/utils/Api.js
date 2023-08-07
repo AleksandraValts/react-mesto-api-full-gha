@@ -109,7 +109,7 @@ class Api {
 
 const apiData = new Api ({
  // url: 'http://localhost:3000',
-  url: 'http://api.valts.mesto.nomoreparties.co',
+  url: 'https://api.valts.mesto.nomoreparties.co',
   headers: {
     'content-type': 'application/json',
     authorization: `Bearer ${localStorage.getItem('jwt')}`,

@@ -31,3 +31,15 @@ yarn-error.log*
 logs
 *.log
 npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.idea
+.vscode
+
+build
